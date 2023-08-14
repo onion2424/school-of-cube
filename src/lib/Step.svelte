@@ -1,0 +1,413 @@
+<script lang="ts">
+    let face = ["none", "blue", "orange", "white", "red", "yellow", "green"];
+    export let notation = "";
+    export let colors = new Array<number>(27);
+    colors = [
+        6, 6, 6, 6, 6, 6, 6, 6, 6,
+
+        3, 3, 3, 3, 3, 3, 3, 3, 3,
+
+        2, 2, 2, 2, 2, 2, 2, 2, 2,
+    ];
+</script>
+
+<div class="step">
+    <div class="scene U2 {notation}">
+        <span style="display: none;">180°</span>
+        <div
+            class="pivot centered"
+            style="transform: rotateX(-35deg) rotateY(315deg)"
+        >
+            <div class="cube">
+                <div
+                    class="piece"
+                    style="transform: rotateX(0deg) translateX(2em);"
+                >
+                    <div class="element right">
+                        <div class="sticker {face[colors[22]]}" />
+                    </div>
+                </div>
+                <div
+                    class="piece"
+                    style="transform: rotateX(0deg) translateY(-2em);"
+                >
+                    <div class="element top">
+                        <div class="sticker {face[colors[4]]}" />
+                    </div>
+                </div>
+                <div
+                    class="piece"
+                    style="transform: rotateX(0deg) translateZ(2em);"
+                >
+                    <div class="element front">
+                        <div class="sticker {face[colors[13]]}" />
+                    </div>
+                </div>
+                <div
+                    class="piece"
+                    style="transform: rotateX(0deg) translateX(2em) translateY(-2em);"
+                >
+                    <div class="element right Ur">
+                        <div class="sticker {face[colors[19]]}" />
+                    </div>
+                    <div class="element top">
+                        <div class="sticker {face[colors[5]]}" />
+                    </div>
+                </div>
+                <div
+                    class="piece"
+                    style="transform: rotateX(0deg) translateY(-2em) translateZ(-2em);"
+                >
+                    <div class="element top">
+                        <div class="sticker {face[colors[1]]}" />
+                    </div>
+                </div>
+                <div
+                    class="piece"
+                    style="transform: rotateX(0deg) translateY(2em) translateZ(2em);"
+                >
+                    <div class="element front">
+                        <div class="sticker {face[colors[16]]}" />
+                    </div>
+                </div>
+                <div
+                    class="piece"
+                    style="transform: rotateX(0deg) translateZ(-2em) translateX(2em);"
+                >
+                    <div class="element right">
+                        <div class="sticker {face[colors[23]]}" />
+                    </div>
+                </div>
+                <div
+                    class="piece"
+                    style="transform: rotateX(0deg) translateZ(2em) translateX(-2em);"
+                >
+                    <div class="element front">
+                        <div class="sticker {face[colors[12]]}" />
+                    </div>
+                </div>
+                <div
+                    class="piece"
+                    style="transform: rotateX(0deg) translateX(-2em) translateY(-2em);"
+                >
+                    <div class="element top">
+                        <div class="sticker {face[colors[3]]}" />
+                    </div>
+                </div>
+                <div
+                    class="piece"
+                    style="transform: rotateX(0deg) translateX(2em) translateY(2em);"
+                >
+                    <div class="element right">
+                        <div class="sticker {face[colors[25]]}" />
+                    </div>
+                </div>
+                <div
+                    class="piece"
+                    style="transform: rotateX(0deg) translateY(-2em) translateZ(2em);"
+                >
+                    <div class="element top">
+                        <div class="sticker {face[colors[7]]}" />
+                    </div>
+                    <div class="element front U">
+                        <div class="sticker {face[colors[10]]}" />
+                    </div>
+                </div>
+                <div
+                    class="piece"
+                    style="transform: rotateX(0deg) translateZ(2em) translateX(2em);"
+                >
+                    <div class="element right">
+                        <div class="sticker {face[colors[21]]}" />
+                    </div>
+                    <div class="element front">
+                        <div class="sticker {face[colors[14]]}" />
+                    </div>
+                </div>
+                <div
+                    class="piece"
+                    style="transform: rotateX(0deg) translateX(-2em) translateY(-2em) translateZ(-2em);"
+                >
+                    <div class="element left">
+                        <div class="sticker blue" />
+                    </div>
+
+                    <div class="element top">
+                        <div class="sticker {face[colors[0]]}" />
+                    </div>
+                </div>
+                <div
+                    class="piece"
+                    style="transform: rotateX(0deg) translateX(2em) translateY(2em) translateZ(2em);"
+                >
+                    <div class="element right">
+                        <div class="sticker {face[colors[24]]}" />
+                    </div>
+
+                    <div class="element front">
+                        <div class="sticker {face[colors[17]]}" />
+                    </div>
+                </div>
+                <div
+                    class="piece"
+                    style="transform: rotateX(0deg) translateY(-2em) translateZ(2em) translateX(-2em);"
+                >
+                    <div class="element top">
+                        <div class="sticker {face[colors[6]]}" />
+                    </div>
+
+                    <div class="element front U">
+                        <div class="sticker {face[colors[9]]} U" />
+                    </div>
+                </div>
+                <div
+                    class="piece"
+                    style="transform: rotateX(0deg) translateY(2em) translateZ(-2em) translateX(2em);"
+                >
+                    <div class="element right">
+                        <div class="sticker {face[colors[26]]}" />
+                    </div>
+                </div>
+                <div
+                    class="piece"
+                    style="transform: rotateX(0deg) translateZ(2em) translateX(2em) translateY(-2em);"
+                >
+                    <div class="element right Ur">
+                        <div class="sticker {face[colors[18]]}" />
+                    </div>
+                    <div class="element top">
+                        <div class="sticker {face[colors[8]]}" />
+                    </div>
+                    <div class="element front U">
+                        <div class="sticker {face[colors[11]]}" />
+                    </div>
+                </div>
+                <div
+                    class="piece"
+                    style="transform: rotateX(0deg) translateX(-2em) translateY(2em) translateZ(2em);"
+                >
+                    <div class="element front">
+                        <div class="sticker {face[colors[15]]}" />
+                    </div>
+                </div>
+                <div
+                    class="piece"
+                    style="transform: rotateX(0deg) translateX(2em) translateY(-2em) translateZ(-2em);"
+                >
+                    <div class="element right Ur">
+                        <div class="sticker {face[colors[20]]} Ur" />
+                    </div>
+                    <div class="element top">
+                        <div class="sticker {face[colors[2]]}" />
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<style lang="scss">
+    $base-color: #0a0a0a;
+    $ground-color: #2f2f31;
+    $element-size: 2em;
+    $sticker-size: 95%;
+    $rounded: 5%;
+    $faces: (
+        left: (
+            0,
+            -90,
+            180,
+        ),
+        right: (
+            0,
+            90,
+            90,
+        ),
+        back: (
+            0,
+            180,
+            -90,
+        ),
+        front: (
+            0,
+            0,
+            0,
+        ),
+        bottom: (
+            -90,
+            0,
+            -90,
+        ),
+        top: (
+            90,
+            0,
+            180,
+        ),
+    );
+    $colors: (
+        blue: #001ca8,
+        green: #006e16,
+        white: #ddd,
+        yellow: #e0ae00,
+        orange: #ff5000,
+        red: #df0500,
+    );
+
+    :root {
+        --cube-scale: 1;
+    }
+
+    .step {
+        height: calc(170px * var(--cube-scale));
+        width: calc(170px * var(--cube-scale));
+    }
+
+    .text {
+        text-align: center;
+        font: {
+            family: Helvetica;
+            size: 0.8rem;
+        }
+        color: grey;
+        pointer-events: none;
+    }
+
+    .centered {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        margin: auto;
+    }
+
+    .scene {
+        width: 100%;
+        height: 100%;
+        perspective: 1200px;
+        transform-style: preserve-3d;
+        > .pivot {
+            width: 0;
+            height: 0;
+            transition: 0.18s;
+        }
+        .anchor {
+            width: $element-size;
+            height: calc($element-size * 3);
+        }
+        div {
+            position: absolute;
+            transform-style: inherit;
+        }
+    }
+
+    .cube {
+        font-size: calc(var(--cube-scale) * 100%);
+        margin-left: calc((-1 * $element-size) / 2);
+        margin-top: calc((-1 * $element-size) / 2);
+        > .piece {
+            width: calc($element-size - 0.1em);
+            height: calc($element-size - 0.1em);
+            > .element {
+                width: 100%;
+                height: 100%;
+                background: $base-color;
+                outline: 1px solid transparent; // firefox aliasing
+                border: 0.05em solid $base-color {
+                    radius: $rounded;
+                }
+                @each $face, $angles in $faces {
+                    &.#{$face} {
+                        transform: rotateX +
+                            "(" +
+                            nth($angles, 1) +
+                            "deg)"
+                            rotateY +
+                            "(" +
+                            nth($angles, 2) +
+                            "deg)"
+                            rotateZ +
+                            "(" +
+                            nth($angles, 3) +
+                            "deg)"
+                            translateZ(calc($element-size / 2));
+                    }
+                }
+                > :global(.sticker) {
+                    @extend .centered;
+                    transform: translateZ(calc(2px * var(--cube-scale)));
+                    width: $sticker-size;
+                    height: $sticker-size;
+                    border-radius: $rounded;
+                    position: relative;
+                    outline: 1px solid transparent; // firefox aliasing
+                    box-shadow: inset 0.05em 0.05em 0.2rem 0 rgba(white, 0.25),
+                        inset -0.05em -0.05em 0.2rem 0 rgba(black, 0.25);
+                }
+            }
+        }
+    }
+    .scene {
+        &.U2 span {
+            display: block !important;
+            color: red;
+            font-size: calc(1em * var(--cube-scale));
+            display: block;
+            transform: translateZ(5px);
+        }
+
+        &.U div.element.U > .sticker:before,
+        &.U2 div.element.U > .sticker:before {
+            background-color: blue;
+            position: absolute;
+            top: 50%;
+            //right: calc(15px * var(--cube-scale));
+            width: 100%;
+            height: calc(2px * var(--cube-scale));
+            margin-top: 0px;
+            content: "";
+        }
+        &.U div.element.U > .sticker.U:after,
+        &.U2 div.element.U > .sticker.U:after {
+            position: absolute;
+            top: 50%;
+            right: calc(12px * var(--cube-scale));
+            width: calc(15px * var(--cube-scale));
+            height: calc(15px * var(--cube-scale));
+            margin-top: calc(-7px * var(--cube-scale));
+            transform: rotate(-130deg);
+            border-top: calc(2px * var(--cube-scale)) solid blue;
+            border-right: calc(2px * var(--cube-scale)) solid blue;
+            content: "";
+            display: inline-block;
+            vertical-align: middle;
+        }
+
+        &.Ur div.element.Ur > .sticker:before,
+        &.U2 div.element.Ur > .sticker:before {
+            background-color: blue;
+            position: absolute;
+            left: 50%;
+            //right: calc(15px * var(--cube-scale));
+            //transform: rotate(-90deg);
+            height: 100%;
+            width: calc(2px * var(--cube-scale));
+            margin-top: 0px;
+            content: "";
+        }
+        &.Ur div.element.Ur > .sticker.Ur:after {
+            position: absolute;
+            top: 30%;
+            right: calc(5px * var(--cube-scale));
+            width: calc(15px * var(--cube-scale));
+            height: calc(15px * var(--cube-scale));
+            margin-top: calc(-7px * var(--cube-scale));
+            transform: rotate(-60deg);
+            border-top: calc(2px * var(--cube-scale)) solid blue;
+            border-right: calc(2px * var(--cube-scale)) solid blue;
+            content: "";
+            display: inline-block;
+            vertical-align: middle;
+        }
+    }
+</style>
