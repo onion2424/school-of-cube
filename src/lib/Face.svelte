@@ -209,7 +209,7 @@
     );
 
     :root {
-        --cube-scale: 0.3;
+        --cube-scale: 1;
     }
 
     .face {
