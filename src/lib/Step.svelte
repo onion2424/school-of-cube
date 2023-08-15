@@ -1,18 +1,12 @@
 <script lang="ts">
-    let face = ["none", "blue", "orange", "white", "red", "yellow", "green"];
+    let face = ["none", "blue", "orange", "white", "red", "yellow", "green", "purple"];
     export let notation = "";
     export let colors = new Array<number>(27);
-    colors = [
-        6, 6, 6, 6, 6, 6, 6, 6, 6,
 
-        3, 3, 3, 3, 3, 3, 3, 3, 3,
-
-        2, 2, 2, 2, 2, 2, 2, 2, 2,
-    ];
 </script>
 
 <div class="step">
-    <div class="scene U2 {notation}">
+    <div class="scene {notation}">
         <span style="display: none;">180°</span>
         <div
             class="pivot centered"
@@ -47,7 +41,7 @@
                     class="piece"
                     style="transform: rotateX(0deg) translateX(2em) translateY(-2em);"
                 >
-                    <div class="element right Ur">
+                    <div class="element right U'">
                         <div class="sticker {face[colors[19]]}" />
                     </div>
                     <div class="element top">
@@ -172,7 +166,7 @@
                     class="piece"
                     style="transform: rotateX(0deg) translateZ(2em) translateX(2em) translateY(-2em);"
                 >
-                    <div class="element right Ur">
+                    <div class="element right U'">
                         <div class="sticker {face[colors[18]]}" />
                     </div>
                     <div class="element top">
@@ -194,8 +188,8 @@
                     class="piece"
                     style="transform: rotateX(0deg) translateX(2em) translateY(-2em) translateZ(-2em);"
                 >
-                    <div class="element right Ur">
-                        <div class="sticker {face[colors[20]]} Ur" />
+                    <div class="element right U'">
+                        <div class="sticker {face[colors[20]]} U'" />
                     </div>
                     <div class="element top">
                         <div class="sticker {face[colors[2]]}" />
@@ -204,6 +198,7 @@
             </div>
         </div>
     </div>
+    <div>{notation}</div>
 </div>
 
 <style lang="scss">
@@ -260,6 +255,7 @@
     .step {
         height: calc(170px * var(--cube-scale));
         width: calc(170px * var(--cube-scale));
+        margin: auto;
     }
 
     .text {
@@ -354,6 +350,7 @@
             font-size: calc(1em * var(--cube-scale));
             display: block;
             transform: translateZ(5px);
+            text-align: left;
         }
 
         &.U div.element.U > .sticker:before,
@@ -361,7 +358,7 @@
             background-color: blue;
             position: absolute;
             top: 50%;
-            //right: calc(15px * var(--cube-scale));
+            left:0;
             width: 100%;
             height: calc(2px * var(--cube-scale));
             margin-top: 0px;
@@ -383,8 +380,8 @@
             vertical-align: middle;
         }
 
-        &.Ur div.element.Ur > .sticker:before,
-        &.U2 div.element.Ur > .sticker:before {
+        &.U\' div.element.U\' > .sticker:before,
+        &.U2 div.element.U\' > .sticker:before {
             background-color: blue;
             position: absolute;
             left: 50%;
@@ -395,7 +392,7 @@
             margin-top: 0px;
             content: "";
         }
-        &.Ur div.element.Ur > .sticker.Ur:after {
+        &.U\' div.element.U\' > .sticker.U\':after {
             position: absolute;
             top: 30%;
             right: calc(5px * var(--cube-scale));
@@ -409,5 +406,12 @@
             display: inline-block;
             vertical-align: middle;
         }
+
+        &.F div.element > .sticker::before
+        {
+
+        }
+ 
     }
+    
 </style>

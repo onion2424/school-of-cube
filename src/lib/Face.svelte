@@ -1,24 +1,25 @@
 <script lang="ts">
-    let face = ["none", "blue", "orange", "white", "red", "yellow", "green"];
-    export let classes = [
-        "horizon location0 size3 arrow2",
-        "vertical location0 size3 arrow1",
-        "upper location6 size3 arrow1",
-        "upper location3 size2 arrow2",
-        "lower location3 size2 arrow1",
-        "vertical location1 size3 arrow2"
-    ];
+    let face = ["none", "blue", "orange", "white", "red", "yellow", "green", "purple"];
+    export let classes = new Array<string>();
+    // [
+    //     "horizon location0 size3 arrow2",
+    //     "vertical location0 size3 arrow1",
+    //     "upper location6 size3 arrow1",
+    //     "upper location3 size2 arrow2",
+    //     "lower location3 size2 arrow1",
+    //     "vertical location1 size3 arrow2"
+    // ];
     export let colors = new Array<number>(27);
-    colors = [
-        6, 6, 6, 
-        6, 6, 6, 
-        6, 6, 6,
+    // colors = [
+    //     6, 6, 6, 
+    //     6, 6, 6, 
+    //     6, 6, 6,
 
-        2, 2, 2, 
-        3, 3, 3, 
-        4, 4, 4,
-        5, 5, 5, 
-    ];
+    //     2, 2, 2, 
+    //     3, 3, 3, 
+    //     4, 4, 4,
+    //     5, 5, 5, 
+    // ];
 </script>
 
 <div class="face">
@@ -37,12 +38,16 @@
                     class="piece"
                     style="transform: rotateX(0deg) translateY(-2em) translateZ(2em) translateX(-2em);"
                 >
+                {#if colors[20] != 0}
                     <div class="element left s-r6LgU90Jc_vZ">
                         <div class="sticker {face[colors[20]]}" />
                     </div>
+                {/if}
+                {#if colors[9] != 0}
                     <div class="element top s-r6LgU90Jc_vZ">
                         <div class="sticker {face[colors[9]]}" />
                     </div>
+                {/if}
                     <div class="element front s-r6LgU90Jc_vZ">
                         <div class="sticker {face[colors[0]]}">
                         </div>
@@ -52,9 +57,11 @@
                     class="piece s-r6LgU90Jc_vZ"
                     style="transform: rotateX(0deg) translateY(-2em) translateZ(2em);"
                 >
+                {#if colors[10] != 0}
                     <div class="element top s-r6LgU90Jc_vZ">
                         <div class="sticker {face[colors[10]]}" />
                     </div>
+                {/if}
                     <div class="element front s-r6LgU90Jc_vZ">
                         <div class="sticker {face[colors[1]]}">
                         </div>
@@ -64,12 +71,16 @@
                     class="piece s-r6LgU90Jc_vZ"
                     style="transform: rotateX(0deg) translateZ(2em) translateX(2em) translateY(-2em);"
                 >
+                {#if colors[12] != 0}
                     <div class="element right s-r6LgU90Jc_vZ">
                         <div class="sticker {face[colors[12]]}" />
                     </div>
+                {/if}
+                {#if colors[11] != 0}
                     <div class="element top s-r6LgU90Jc_vZ">
                         <div class="sticker {face[colors[11]]}" />
                     </div>
+                {/if}
                     <div class="element front s-r6LgU90Jc_vZ">
                         <div class="sticker {face[colors[2]]}" >
                         </div>
@@ -80,9 +91,11 @@
                     class="piece s-r6LgU90Jc_vZ"
                     style="transform: rotateX(0deg) translateZ(2em) translateX(-2em);"
                 >
+                {#if colors[3] != 0}
                     <div class="element left s-r6LgU90Jc_vZ">
                         <div class="sticker {face[colors[19]]}" />
                     </div>
+                {/if}
                     <div class="element front s-r6LgU90Jc_vZ">
                         <div class="sticker {face[colors[3]]}">
                         </div>
@@ -103,9 +116,11 @@
                     class="piece s-r6LgU90Jc_vZ"
                     style="transform: rotateX(0deg) translateZ(2em) translateX(2em);"
                 >
+                {#if colors[13] != 0}
                     <div class="element right s-r6LgU90Jc_vZ">
                         <div class="sticker {face[colors[13]]}" />
                     </div>
+                {/if}
                     <div class="element front s-r6LgU90Jc_vZ">
                         <div class="sticker {face[colors[5]]}">
                         </div>
@@ -116,12 +131,16 @@
                     class="piece s-r6LgU90Jc_vZ"
                     style="transform: rotateX(0deg) translateX(-2em) translateY(2em) translateZ(2em);"
                 >
+                {#if colors[18] != 0}
                     <div class="element left s-r6LgU90Jc_vZ">
                         <div class="sticker {face[colors[18]]}" />
                     </div>
+                {/if}
+                {#if colors[17] != 0}
                     <div class="element bottom s-r6LgU90Jc_vZ">
                         <div class="sticker {face[colors[17]]}" />
                     </div>
+                {/if}
                     <div class="element front s-r6LgU90Jc_vZ">
                         <div class="sticker {face[colors[6]]}">
                         </div>
@@ -131,9 +150,11 @@
                     class="piece s-r6LgU90Jc_vZ"
                     style="transform: rotateX(0deg) translateY(2em) translateZ(2em);"
                 >
+                {#if colors[16] != 0}
                     <div class="element bottom s-r6LgU90Jc_vZ">
                         <div class="sticker {face[colors[16]]}" />
                     </div>
+                {/if}
                     <div class="element front s-r6LgU90Jc_vZ">
                         <div class="sticker {face[colors[7]]}">
                         </div>
@@ -143,12 +164,16 @@
                     class="piece s-r6LgU90Jc_vZ"
                     style="transform: rotateX(0deg) translateX(2em) translateY(2em) translateZ(2em);"
                 >
+                {#if colors[14] != 0}
                     <div class="element right s-r6LgU90Jc_vZ">
                         <div class="sticker {face[colors[14]]}" />
                     </div>
+                {/if}
+                {#if colors[15] != 0}
                     <div class="element bottom s-r6LgU90Jc_vZ">
                         <div class="sticker {face[colors[15]]}" />
                     </div>
+                {/if}
                     <div class="element front s-r6LgU90Jc_vZ">
                         <div class="sticker {face[colors[8]]}">
                         </div>
@@ -215,6 +240,8 @@
     .face {
         height: calc(170px * var(--cube-scale));
         width: calc(170px * var(--cube-scale));
+        margin: auto;
+
     }
 
     .text {
@@ -300,10 +327,6 @@
                     outline: 1px solid transparent; // firefox aliasing
                     box-shadow: inset 0.05em 0.05em 0.2rem 0 rgba(white, 0.25),
                         inset -0.05em -0.05em 0.2rem 0 rgba(black, 0.25);
-                    &.none
-                    {
-                        display: none;
-                    }
                 }
             }
         }
