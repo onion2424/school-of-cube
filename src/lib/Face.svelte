@@ -443,7 +443,7 @@
                     {
                         height: calc(2em * $num);
                         width: calc(2em * $num);
-                        transform: translateY(calc(-2em * $num + 2em));
+                        transform: translateY(calc(-2em * $num + 2em)) translateZ(40px);
                     }
                 }
 
