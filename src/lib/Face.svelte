@@ -209,7 +209,7 @@
     );
 
     :root {
-        --cube-scale: 1;
+        --cube-scale: 0.5;
     }
 
     .face {
@@ -276,19 +276,19 @@
                 }
                 &.top {
                     transform: rotateX(80deg) rotateY(0deg) rotateZ(0deg)
-                        translateZ(1em);
+                        translateZ(1.5em);
                 }
                 &.bottom {
                     transform: rotateX(-80deg) rotateY(0deg) rotateZ(0deg)
-                        translateZ(1em);
+                        translateZ(1.5em);
                 }
                 &.right {
                     transform: rotateX(0deg) rotateY(80deg) rotateZ(0deg)
-                        translateZ(1em);
+                        translateZ(1.5em);
                 }
                 &.left {
                     transform: rotateX(0deg) rotateY(-80deg) rotateZ(0deg)
-                        translateZ(1em);
+                        translateZ(1.5em);
                 }
                 > :global(.sticker) {
                     @extend .centered;
@@ -332,7 +332,9 @@
             position: absolute;
 
             margin-top: 0px;
+            // iosで必要だった
             z-index: 100;
+            transform: translateZ(50px);
             @each $location, $index in $locations 
                 {
                     &.#{$location}
