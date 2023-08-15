@@ -60,7 +60,7 @@
                     class="piece"
                     style="transform: rotateX(0deg) translateY(2em) translateZ(2em);"
                 >
-                    <div class="element front">
+                    <div class="element front D' D2">
                         <div class="sticker {face[colors[16]]}" />
                     </div>
                 </div>
@@ -92,7 +92,7 @@
                     class="piece"
                     style="transform: rotateX(0deg) translateX(2em) translateY(2em);"
                 >
-                    <div class="element right">
+                    <div class="element right D D2">
                         <div class="sticker {face[colors[25]]}" />
                     </div>
                 </div>
@@ -111,7 +111,7 @@
                     class="piece"
                     style="transform: rotateX(0deg) translateZ(2em) translateX(2em);"
                 >
-                    <div class="element right">
+                    <div class="element right F F'">
                         <div class="sticker {face[colors[21]]}" />
                     </div>
                     <div class="element front R R'">
@@ -134,11 +134,11 @@
                     class="piece"
                     style="transform: rotateX(0deg) translateX(2em) translateY(2em) translateZ(2em);"
                 >
-                    <div class="element right">
-                        <div class="sticker {face[colors[24]]}" />
+                    <div class="element right F F' D D2">
+                        <div class="sticker {face[colors[24]]} F" />
                     </div>
 
-                    <div class="element front R R'">
+                    <div class="element front R R' D' D2">
                         <div class="sticker {face[colors[17]]} R'" />
                     </div>
                 </div>
@@ -151,23 +151,23 @@
                     </div>
 
                     <div class="element front U L L'">
-                        <div class="sticker {face[colors[9]]} U L" />
+                        <div class="sticker {face[colors[9]]} U L'" />
                     </div>
                 </div>
                 <div
                     class="piece"
                     style="transform: rotateX(0deg) translateY(2em) translateZ(-2em) translateX(2em);"
                 >
-                    <div class="element right">
-                        <div class="sticker {face[colors[26]]}" />
+                    <div class="element right D D2">
+                        <div class="sticker {face[colors[26]]} D" />
                     </div>
                 </div>
                 <div
                     class="piece"
                     style="transform: rotateX(0deg) translateZ(2em) translateX(2em) translateY(-2em);"
                 >
-                    <div class="element right U'">
-                        <div class="sticker {face[colors[18]]}" />
+                    <div class="element right U' F F'">
+                        <div class="sticker {face[colors[18]]} F'" />
                     </div>
                     <div class="element top">
                         <div class="sticker {face[colors[8]]}" />
@@ -180,8 +180,8 @@
                     class="piece"
                     style="transform: rotateX(0deg) translateX(-2em) translateY(2em) translateZ(2em);"
                 >
-                    <div class="element front L L'">
-                        <div class="sticker {face[colors[15]]} L'" />
+                    <div class="element front L L' D' D2">
+                        <div class="sticker {face[colors[15]]} L D'" />
                     </div>
                 </div>
                 <div
@@ -255,7 +255,7 @@
     .step {
         height: auto;
         width: auto;
-        margin: auto;
+        position: relative;
     }
 
     .text {
@@ -277,11 +277,28 @@
         margin: auto;
     }
 
+    // 遷移用に矢印をつける
+    :global(.arrow) .step::before
+    {
+        content:"→";
+        position: absolute;
+        left: calc(0% - 0.5em);
+        top: calc((170px * var(--cube-scale)) / 2 - 0.5em);
+    }
+
     .scene {
         height: calc(170px * var(--cube-scale));
         width: calc(170px * var(--cube-scale));
         perspective: 1200px;
         transform-style: preserve-3d;
+        margin: auto;
+        // &::after
+        // {
+        //     content:"→";
+        //     position: absolute;
+        //     right: calc(0% - 0.5em);
+        //     top: calc(50% - 0.5em);
+        // }
         > .pivot {
             width: 0;
             height: 0;
@@ -344,17 +361,23 @@
         }
     }
     .scene {
-        &.U2 span {
-            display: block !important;
-            color: red;
-            font-size: calc(1em * var(--cube-scale));
-            display: block;
-            transform: translateZ(5px);
-            text-align: left;
+        &.U2, &.D2{
+            span {
+                display: block !important;
+                color: red;
+                font-size: calc(1em * var(--cube-scale));
+                display: block;
+                transform: translateZ(5px);
+                text-align: left;
+            }
         }
-
         &.U div.element.U > .sticker:before,
-        &.U2 div.element.U > .sticker:before {
+        &.U2 div.element.U > .sticker:before,
+        &.D\' div.element.D\' > .sticker:before,
+        &.D2 div.element.D\' > .sticker:before,
+        &.F div.element.F > .sticker::before,
+        &.F\' div.element.F\' > .sticker::before
+        {
             background-color: blue;
             position: absolute;
             top: 50%;
@@ -364,8 +387,12 @@
             margin-top: 0px;
             content: "";
         }
-        &.U div.element.U > .sticker.U:after,
-        &.U2 div.element.U > .sticker.U:after {
+
+        &.U div.element.U > .sticker.U::after,
+        &.U2 div.element.U > .sticker.U::after,
+        &.D\' div.element.D\' > .sticker.D\':after,
+        &.F\' div.element.F\' > .sticker.F\'::after
+        {
             position: absolute;
             top: 50%;
             right: calc(12px * var(--cube-scale));
@@ -381,7 +408,10 @@
         }
 
         &.U\' div.element.U\' > .sticker:before,
-        &.U2 div.element.U\' > .sticker:before {
+        &.U2 div.element.U\' > .sticker:before,
+        &.D div.element.D > .sticker:before,
+        &.D2 div.element.D > .sticker:before
+        {
             background-color: blue;
             position: absolute;
             left: 50%;
@@ -392,7 +422,11 @@
             margin-top: 0px;
             content: "";
         }
-        &.U\' div.element.U\' > .sticker.U\':after {
+
+        &.U\' div.element.U\' > .sticker.U\':after,
+        &.D div.element.D > .sticker.D:after,
+        &.D2 div.element.D > .sticker.D:after
+        {
             position: absolute;
             top: 30%;
             right: calc(5px * var(--cube-scale));
@@ -420,8 +454,9 @@
             margin-top: 0px;
             content: "";
         }
+
         &.R div.element.R > .sticker.R::after,
-        &.L div.element.L > .sticker.L::after
+        &.L\' div.element.L\' > .sticker.L\'::after
         {
             position: absolute;
             top: 30%;
@@ -437,7 +472,7 @@
             vertical-align: middle;
         }
         &.R\' div.element.R\' > .sticker.R\'::after,
-        &.L\' div.element.L\' > .sticker.L\'::after
+        &.L div.element.L > .sticker.L::after
         {
             position: absolute;
             bottom: 0;
@@ -448,6 +483,22 @@
             transform: rotate(-45deg);
             border-bottom: calc(2px * var(--cube-scale)) solid blue;
             border-left: calc(2px * var(--cube-scale)) solid blue;
+            content: "";
+            display: inline-block;
+            vertical-align: middle;
+        }
+
+        &.F div.element.F > .sticker.F::after
+        {
+            position: absolute;
+            bottom: calc(5px * var(--cube-scale));
+            right: 0;
+            width: calc(15px * var(--cube-scale));
+            height: calc(15px * var(--cube-scale));
+            margin-top: calc(-7px * var(--cube-scale));
+            transform: rotate(-45deg);
+            border-bottom: calc(2px * var(--cube-scale)) solid blue;
+            border-right: calc(2px * var(--cube-scale)) solid blue;
             content: "";
             display: inline-block;
             vertical-align: middle;
