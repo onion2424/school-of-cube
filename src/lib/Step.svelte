@@ -248,10 +248,6 @@
         red: #df0500,
     );
 
-    :root {
-        --cube-scale: 1;
-    }
-
     .step {
         height: auto;
         width: auto;

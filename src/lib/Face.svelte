@@ -233,10 +233,6 @@
         red: #df0500,
     );
 
-    :root {
-        --cube-scale: 0.5;
-    }
-
     .face {
         height: calc(170px * var(--cube-scale));
         width: calc(170px * var(--cube-scale));
