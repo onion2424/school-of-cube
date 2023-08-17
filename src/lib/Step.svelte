@@ -15,7 +15,7 @@
             <div class="cube">
                 <div
                     class="piece"
-                    style="transform: rotateX(0deg) translateX(2em);"
+                    style="transform: rotateX(0deg) translateX(1em);"
                 >
                     <div class="element right">
                         <div class="sticker {face[colors[22]]}" />
@@ -23,7 +23,7 @@
                 </div>
                 <div
                     class="piece"
-                    style="transform: rotateX(0deg) translateY(-2em);"
+                    style="transform: rotateX(0deg) translateY(-1em);"
                 >
                     <div class="element top">
                         <div class="sticker {face[colors[4]]}" />
@@ -31,7 +31,7 @@
                 </div>
                 <div
                     class="piece"
-                    style="transform: rotateX(0deg) translateZ(2em);"
+                    style="transform: rotateX(0deg) translateZ(1em);"
                 >
                     <div class="element front">
                         <div class="sticker {face[colors[13]]}" />
@@ -39,7 +39,7 @@
                 </div>
                 <div
                     class="piece"
-                    style="transform: rotateX(0deg) translateX(2em) translateY(-2em);"
+                    style="transform: rotateX(0deg) translateX(1em) translateY(-1em);"
                 >
                     <div class="element right U'">
                         <div class="sticker {face[colors[19]]}" />
@@ -50,7 +50,7 @@
                 </div>
                 <div
                     class="piece"
-                    style="transform: rotateX(0deg) translateY(-2em) translateZ(-2em);"
+                    style="transform: rotateX(0deg) translateY(-1em) translateZ(-1em);"
                 >
                     <div class="element top">
                         <div class="sticker {face[colors[1]]}" />
@@ -58,7 +58,7 @@
                 </div>
                 <div
                     class="piece"
-                    style="transform: rotateX(0deg) translateY(2em) translateZ(2em);"
+                    style="transform: rotateX(0deg) translateY(1em) translateZ(1em);"
                 >
                     <div class="element front D' D2">
                         <div class="sticker {face[colors[16]]}" />
@@ -66,7 +66,7 @@
                 </div>
                 <div
                     class="piece"
-                    style="transform: rotateX(0deg) translateZ(-2em) translateX(2em);"
+                    style="transform: rotateX(0deg) translateZ(-1em) translateX(1em);"
                 >
                     <div class="element right">
                         <div class="sticker {face[colors[23]]}" />
@@ -74,7 +74,7 @@
                 </div>
                 <div
                     class="piece"
-                    style="transform: rotateX(0deg) translateZ(2em) translateX(-2em);"
+                    style="transform: rotateX(0deg) translateZ(1em) translateX(-1em);"
                 >
                     <div class="element front L L'">
                         <div class="sticker {face[colors[12]]}" />
@@ -82,7 +82,7 @@
                 </div>
                 <div
                     class="piece"
-                    style="transform: rotateX(0deg) translateX(-2em) translateY(-2em);"
+                    style="transform: rotateX(0deg) translateX(-1em) translateY(-1em);"
                 >
                     <div class="element top">
                         <div class="sticker {face[colors[3]]}" />
@@ -90,7 +90,7 @@
                 </div>
                 <div
                     class="piece"
-                    style="transform: rotateX(0deg) translateX(2em) translateY(2em);"
+                    style="transform: rotateX(0deg) translateX(1em) translateY(1em);"
                 >
                     <div class="element right D D2">
                         <div class="sticker {face[colors[25]]}" />
@@ -98,7 +98,7 @@
                 </div>
                 <div
                     class="piece"
-                    style="transform: rotateX(0deg) translateY(-2em) translateZ(2em);"
+                    style="transform: rotateX(0deg) translateY(-1em) translateZ(1em);"
                 >
                     <div class="element top">
                         <div class="sticker {face[colors[7]]}" />
@@ -109,7 +109,7 @@
                 </div>
                 <div
                     class="piece"
-                    style="transform: rotateX(0deg) translateZ(2em) translateX(2em);"
+                    style="transform: rotateX(0deg) translateZ(1em) translateX(1em);"
                 >
                     <div class="element right F F'">
                         <div class="sticker {face[colors[21]]}" />
@@ -120,7 +120,7 @@
                 </div>
                 <div
                     class="piece"
-                    style="transform: rotateX(0deg) translateX(-2em) translateY(-2em) translateZ(-2em);"
+                    style="transform: rotateX(0deg) translateX(-1em) translateY(-1em) translateZ(-1em);"
                 >
                     <div class="element left">
                         <div class="sticker blue" />
@@ -132,7 +132,7 @@
                 </div>
                 <div
                     class="piece"
-                    style="transform: rotateX(0deg) translateX(2em) translateY(2em) translateZ(2em);"
+                    style="transform: rotateX(0deg) translateX(1em) translateY(1em) translateZ(1em);"
                 >
                     <div class="element right F F' D D2">
                         <div class="sticker {face[colors[24]]} F" />
@@ -144,7 +144,7 @@
                 </div>
                 <div
                     class="piece"
-                    style="transform: rotateX(0deg) translateY(-2em) translateZ(2em) translateX(-2em);"
+                    style="transform: rotateX(0deg) translateY(-1em) translateZ(1em) translateX(-1em);"
                 >
                     <div class="element top">
                         <div class="sticker {face[colors[6]]}" />
@@ -156,7 +156,7 @@
                 </div>
                 <div
                     class="piece"
-                    style="transform: rotateX(0deg) translateY(2em) translateZ(-2em) translateX(2em);"
+                    style="transform: rotateX(0deg) translateY(1em) translateZ(-1em) translateX(1em);"
                 >
                     <div class="element right D D2">
                         <div class="sticker {face[colors[26]]} D" />
@@ -164,7 +164,7 @@
                 </div>
                 <div
                     class="piece"
-                    style="transform: rotateX(0deg) translateZ(2em) translateX(2em) translateY(-2em);"
+                    style="transform: rotateX(0deg) translateZ(1em) translateX(1em) translateY(-1em);"
                 >
                     <div class="element right U' F F'">
                         <div class="sticker {face[colors[18]]} F'" />
@@ -178,7 +178,7 @@
                 </div>
                 <div
                     class="piece"
-                    style="transform: rotateX(0deg) translateX(-2em) translateY(2em) translateZ(2em);"
+                    style="transform: rotateX(0deg) translateX(-1em) translateY(1em) translateZ(1em);"
                 >
                     <div class="element front L L' D' D2">
                         <div class="sticker {face[colors[15]]} L D'" />
@@ -186,7 +186,7 @@
                 </div>
                 <div
                     class="piece"
-                    style="transform: rotateX(0deg) translateX(2em) translateY(-2em) translateZ(-2em);"
+                    style="transform: rotateX(0deg) translateX(1em) translateY(-1em) translateZ(-1em);"
                 >
                     <div class="element right U'">
                         <div class="sticker {face[colors[20]]} U'" />
@@ -204,7 +204,7 @@
 <style lang="scss">
     $base-color: #0a0a0a;
     $ground-color: #2f2f31;
-    $element-size: 2em;
+    $element-size: 1em;
     $sticker-size: 95%;
     $rounded: 5%;
     $faces: (
