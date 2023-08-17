@@ -2,19 +2,19 @@
 @media (max-width: 389px) {
   :root
   {
-      --cube-scale: 0.3;
+      --cube-scale: 0.5;
   }
 }
 @media (min-width: 390px) and (max-width: 519px) {
   :root
   {
-      --cube-scale: 0.4;
+      --cube-scale: 0.5;
   }
 }
 @media (min-width: 520px) and (max-width: 960px) {
   :root
   {
-      --cube-scale: 0.5;
+      --cube-scale: 1;
   }
 }
 @media (min-width:960px) {
