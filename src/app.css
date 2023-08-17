@@ -4,17 +4,11 @@
   {
       --cube-scale: 0.3;
   }
-  body {
-    background-color: rgb(255, 58, 58);
-  }
 }
 @media (min-width: 390px) and (max-width: 519px) {
   :root
   {
       --cube-scale: 0.4;
-  }
-  body {
-    background-color: rgb(249, 252, 67);
   }
 }
 @media (min-width: 520px) and (max-width: 960px) {
@@ -22,17 +16,11 @@
   {
       --cube-scale: 0.5;
   }
-  body {
-    background-color: rgb(50, 248, 76);
-  }
 }
 @media (min-width:960px) {
   :root
   {
-      --cube-scale: 1;
-  }
-  body {
-    background-color: rgb(45, 152, 252);
+      --cube-scale: 2;
   }
 }
 
@@ -44,7 +32,7 @@ html {
 body {
   height: 100%;
   margin: 0;
-  /* background-color: rgb(252, 234, 211); */
+  background-color: rgb(252, 234, 211);
 }
 
 #app

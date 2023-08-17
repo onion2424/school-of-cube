@@ -279,12 +279,12 @@
         content:"→";
         position: absolute;
         left: calc(0% - 0.5em);
-        top: calc((170px * var(--cube-scale)) / 2 - 0.5em);
+        top: calc((170px * var(--cube-scale)) / 4 - 0.5em);
     }
 
     .scene {
-        height: calc(170px * var(--cube-scale));
-        width: calc(170px * var(--cube-scale));
+        height: calc(170px * var(--cube-scale) / 2);
+        width: calc(170px * var(--cube-scale) / 2);
         perspective: 1200px;
         transform-style: preserve-3d;
         margin: auto;
@@ -344,7 +344,7 @@
                 }
                 > :global(.sticker) {
                     @extend .centered;
-                    transform: translateZ(calc(2px * var(--cube-scale)));
+                    transform: translateZ(calc(1px * var(--cube-scale)));
                     width: $sticker-size;
                     height: $sticker-size;
                     border-radius: $rounded;
@@ -361,7 +361,7 @@
             span {
                 display: block !important;
                 color: red;
-                font-size: calc(1em * var(--cube-scale));
+                font-size: calc(.5em * var(--cube-scale));
                 display: block;
                 transform: translateZ(5px);
                 text-align: left;
@@ -377,7 +377,8 @@
             background-color: blue;
             position: absolute;
             top: 50%;
-            left:0;
+            left: 50%;
+            transform: translate(-50%, -50%);
             width: 100%;
             height: calc(2px * var(--cube-scale));
             margin-top: 0px;
@@ -391,16 +392,13 @@
         {
             position: absolute;
             top: 50%;
-            right: calc(12px * var(--cube-scale));
-            width: calc(15px * var(--cube-scale));
-            height: calc(15px * var(--cube-scale));
-            margin-top: calc(-7px * var(--cube-scale));
-            transform: rotate(-130deg);
+            left: calc(0.5em / 1.414);
+            width: .5em;
+            height: .5em;
+            transform: translate(-50%, -50%) rotate(-130deg);
             border-top: calc(2px * var(--cube-scale)) solid blue;
             border-right: calc(2px * var(--cube-scale)) solid blue;
             content: "";
-            display: inline-block;
-            vertical-align: middle;
         }
 
         &.U\' div.element.U\' > .sticker:before,
@@ -410,9 +408,9 @@
         {
             background-color: blue;
             position: absolute;
+            top: 50%;
             left: 50%;
-            //right: calc(15px * var(--cube-scale));
-            //transform: rotate(-90deg);
+            transform: translate(-50%, -50%);
             height: 100%;
             width: calc(2px * var(--cube-scale));
             margin-top: 0px;
@@ -421,20 +419,19 @@
 
         &.U\' div.element.U\' > .sticker.U\':after,
         &.D div.element.D > .sticker.D:after,
-        &.D2 div.element.D > .sticker.D:after
+        &.D2 div.element.D > .sticker.D:after,
+        &.R div.element.R > .sticker.R::after,
+        &.L\' div.element.L\' > .sticker.L\'::after
         {
             position: absolute;
-            top: 30%;
-            right: calc(5px * var(--cube-scale));
-            width: calc(15px * var(--cube-scale));
-            height: calc(15px * var(--cube-scale));
-            margin-top: calc(-7px * var(--cube-scale));
-            transform: rotate(-60deg);
-            border-top: calc(2px * var(--cube-scale)) solid blue;
+            top: 50%;
+            left: calc(0.5em / 1.414);
+            width: .5em;
+            height: .5em;
+            transform: translate(-50%, -50%) rotate(-130deg);
+            border-bottom: calc(2px * var(--cube-scale)) solid blue;
             border-right: calc(2px * var(--cube-scale)) solid blue;
             content: "";
-            display: inline-block;
-            vertical-align: middle;
         }
 
         &.R div.element.R > .sticker::before,
@@ -444,60 +441,42 @@
         {
             background-color: blue;
             position: absolute;
+            top: 50%;
             left: 50%;
+            transform: translate(-50%, -50%);
             height: 100%;
             width: calc(2px * var(--cube-scale));
             margin-top: 0px;
             content: "";
         }
 
-        &.R div.element.R > .sticker.R::after,
-        &.L\' div.element.L\' > .sticker.L\'::after
-        {
-            position: absolute;
-            top: 30%;
-            right: calc(5px * var(--cube-scale));
-            width: calc(15px * var(--cube-scale));
-            height: calc(15px * var(--cube-scale));
-            margin-top: calc(-7px * var(--cube-scale));
-            transform: rotate(-45deg);
-            border-top: calc(2px * var(--cube-scale)) solid blue;
-            border-right: calc(2px * var(--cube-scale)) solid blue;
-            content: "";
-            display: inline-block;
-            vertical-align: middle;
-        }
+
+
         &.R\' div.element.R\' > .sticker.R\'::after,
         &.L div.element.L > .sticker.L::after
         {
             position: absolute;
-            bottom: 0;
-            right: calc(5px * var(--cube-scale));
-            width: calc(15px * var(--cube-scale));
-            height: calc(15px * var(--cube-scale));
-            margin-top: calc(-7px * var(--cube-scale));
-            transform: rotate(-45deg);
-            border-bottom: calc(2px * var(--cube-scale)) solid blue;
+            top: 50%;
+            left: calc(0.5em / 1.414);
+            width: .5em;
+            height: .5em;
+            transform: translate(-50%, -50%) rotate(-130deg);
+            border-top: calc(2px * var(--cube-scale)) solid blue;
             border-left: calc(2px * var(--cube-scale)) solid blue;
             content: "";
-            display: inline-block;
-            vertical-align: middle;
         }
 
         &.F div.element.F > .sticker.F::after
         {
             position: absolute;
-            bottom: calc(5px * var(--cube-scale));
-            right: 0;
-            width: calc(15px * var(--cube-scale));
-            height: calc(15px * var(--cube-scale));
-            margin-top: calc(-7px * var(--cube-scale));
-            transform: rotate(-45deg);
+            top: 50%;
+            left: calc(0.5em / 1.414);
+            width: .5em;
+            height: .5em;
+            transform: translate(-50%, -50%) rotate(-130deg);
             border-bottom: calc(2px * var(--cube-scale)) solid blue;
-            border-right: calc(2px * var(--cube-scale)) solid blue;
+            border-left: calc(2px * var(--cube-scale)) solid blue;
             content: "";
-            display: inline-block;
-            vertical-align: middle;
         }
     }
     
