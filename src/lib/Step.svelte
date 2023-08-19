@@ -17,7 +17,7 @@
                     class="piece"
                     style="transform: rotateX(0deg) translateX(1em);"
                 >
-                    <div class="element right">
+                    <div class="element right E Y'">
                         <div class="sticker {face[colors[22]]}" />
                     </div>
                 </div>
@@ -33,7 +33,7 @@
                     class="piece"
                     style="transform: rotateX(0deg) translateZ(1em);"
                 >
-                    <div class="element front">
+                    <div class="element front E' Y">
                         <div class="sticker {face[colors[13]]}" />
                     </div>
                 </div>
@@ -41,7 +41,7 @@
                     class="piece"
                     style="transform: rotateX(0deg) translateX(1em) translateY(-1em);"
                 >
-                    <div class="element right U'">
+                    <div class="element right U' Y'">
                         <div class="sticker {face[colors[19]]}" />
                     </div>
                     <div class="element top">
@@ -60,7 +60,7 @@
                     class="piece"
                     style="transform: rotateX(0deg) translateY(1em) translateZ(1em);"
                 >
-                    <div class="element front D' D2">
+                    <div class="element front D' D2 Y">
                         <div class="sticker {face[colors[16]]}" />
                     </div>
                 </div>
@@ -68,16 +68,16 @@
                     class="piece"
                     style="transform: rotateX(0deg) translateZ(-1em) translateX(1em);"
                 >
-                    <div class="element right">
-                        <div class="sticker {face[colors[23]]}" />
+                    <div class="element right E Y'">
+                        <div class="sticker {face[colors[23]]} E" />
                     </div>
                 </div>
                 <div
                     class="piece"
                     style="transform: rotateX(0deg) translateZ(1em) translateX(-1em);"
                 >
-                    <div class="element front L L'">
-                        <div class="sticker {face[colors[12]]}" />
+                    <div class="element front L L' E' Y">
+                        <div class="sticker {face[colors[12]]} E'" />
                     </div>
                 </div>
                 <div
@@ -92,7 +92,7 @@
                     class="piece"
                     style="transform: rotateX(0deg) translateX(1em) translateY(1em);"
                 >
-                    <div class="element right D D2">
+                    <div class="element right D D2 Y'">
                         <div class="sticker {face[colors[25]]}" />
                     </div>
                 </div>
@@ -103,7 +103,7 @@
                     <div class="element top">
                         <div class="sticker {face[colors[7]]}" />
                     </div>
-                    <div class="element front U">
+                    <div class="element front U Y">
                         <div class="sticker {face[colors[10]]}" />
                     </div>
                 </div>
@@ -111,10 +111,10 @@
                     class="piece"
                     style="transform: rotateX(0deg) translateZ(1em) translateX(1em);"
                 >
-                    <div class="element right F F'">
+                    <div class="element right F F' E Y'">
                         <div class="sticker {face[colors[21]]}" />
                     </div>
-                    <div class="element front R R'">
+                    <div class="element front R R' E' Y">
                         <div class="sticker {face[colors[14]]}" />
                     </div>
                 </div>
@@ -134,7 +134,7 @@
                     class="piece"
                     style="transform: rotateX(0deg) translateX(1em) translateY(1em) translateZ(1em);"
                 >
-                    <div class="element right F F' D D2">
+                    <div class="element right F F' D D2 Y'">
                         <div class="sticker {face[colors[24]]} F" />
                     </div>
 
@@ -150,7 +150,7 @@
                         <div class="sticker {face[colors[6]]}" />
                     </div>
 
-                    <div class="element front U L L'">
+                    <div class="element front U L L' Y'">
                         <div class="sticker {face[colors[9]]} U L'" />
                     </div>
                 </div>
@@ -158,7 +158,7 @@
                     class="piece"
                     style="transform: rotateX(0deg) translateY(1em) translateZ(-1em) translateX(1em);"
                 >
-                    <div class="element right D D2">
+                    <div class="element right D D2 Y'">
                         <div class="sticker {face[colors[26]]} D" />
                     </div>
                 </div>
@@ -166,13 +166,13 @@
                     class="piece"
                     style="transform: rotateX(0deg) translateZ(1em) translateX(1em) translateY(-1em);"
                 >
-                    <div class="element right U' F F'">
+                    <div class="element right U' F F' Y'">
                         <div class="sticker {face[colors[18]]} F'" />
                     </div>
                     <div class="element top">
                         <div class="sticker {face[colors[8]]}" />
                     </div>
-                    <div class="element front U R R'">
+                    <div class="element front U R R' Y">
                         <div class="sticker {face[colors[11]]} R" />
                     </div>
                 </div>
@@ -180,7 +180,7 @@
                     class="piece"
                     style="transform: rotateX(0deg) translateX(-1em) translateY(1em) translateZ(1em);"
                 >
-                    <div class="element front L L' D' D2">
+                    <div class="element front L L' D' D2 Y">
                         <div class="sticker {face[colors[15]]} L D'" />
                     </div>
                 </div>
@@ -188,7 +188,7 @@
                     class="piece"
                     style="transform: rotateX(0deg) translateX(1em) translateY(-1em) translateZ(-1em);"
                 >
-                    <div class="element right U'">
+                    <div class="element right U' Y'">
                         <div class="sticker {face[colors[20]]} U'" />
                     </div>
                     <div class="element top">
@@ -369,8 +369,12 @@
         }
         &.U div.element.U > .sticker:before,
         &.U2 div.element.U > .sticker:before,
+        &.E\' div.element.E\' > .sticker:before,
         &.D\' div.element.D\' > .sticker:before,
         &.D2 div.element.D\' > .sticker:before,
+        &.Y div.element.U > .sticker:before,
+        &.Y div.element.E\' > .sticker:before,
+        &.Y div.element.D\' > .sticker:before,
         &.F div.element.F > .sticker::before,
         &.F\' div.element.F\' > .sticker::before
         {
@@ -387,7 +391,11 @@
 
         &.U div.element.U > .sticker.U::after,
         &.U2 div.element.U > .sticker.U::after,
+        &.E\' div.element.E\' > .sticker.E\'::after,
         &.D\' div.element.D\' > .sticker.D\':after,
+        &.Y div.element.U > .sticker.U::after,
+        &.Y div.element.E\' > .sticker.E\'::after,
+        &.Y div.element.D\' > .sticker.D\':after,
         &.F\' div.element.F\' > .sticker.F\'::after
         {
             position: absolute;
@@ -403,8 +411,12 @@
 
         &.U\' div.element.U\' > .sticker:before,
         &.U2 div.element.U\' > .sticker:before,
+        &.E div.element.E > .sticker:before,
         &.D div.element.D > .sticker:before,
-        &.D2 div.element.D > .sticker:before
+        &.D2 div.element.D > .sticker:before,
+        &.Y\' div.element.U\' > .sticker:before,
+        &.Y\' div.element.E > .sticker:before,
+        &.Y\' div.element.D > .sticker:before
         {
             background-color: blue;
             position: absolute;
@@ -421,7 +433,11 @@
         &.D div.element.D > .sticker.D:after,
         &.D2 div.element.D > .sticker.D:after,
         &.R div.element.R > .sticker.R::after,
-        &.L\' div.element.L\' > .sticker.L\'::after
+        &.L\' div.element.L\' > .sticker.L\'::after,
+        &.E div.element.E > .sticker.E::after,
+        &.Y\' div.element.U\' > .sticker.U\'::after,
+        &.Y\' div.element.E > .sticker.E::after,
+        &.Y\' div.element.D > .sticker.D::after
         {
             position: absolute;
             top: 50%;

@@ -1,14 +1,14 @@
 <script lang="ts">
     let face = ["none", "blue", "orange", "white", "red", "yellow", "green", "purple"];
     export let classes = new Array<string>();
-    classes = [
-        "horizon location0 size3  arrow2",
-         "vertical location0 size3 arrow1",
-         "upper location6 size3 arrow2",
-         "upper location3 size2 arrow2",
-         "lower location3 size2 arrow1 ",
-         "vertical location1 size3 arrow2"
-    ];
+    // classes = [
+    //     "horizon location0 size3  arrow2",
+    //      "vertical location0 size3 arrow1",
+    //      "upper location6 size3 arrow2",
+    //      "upper location3 size2 arrow2",
+    //      "lower location3 size2 arrow1 ",
+    //      "vertical location1 size3 arrow2"
+    // ];
     export let colors = new Array<number>(27);
     // colors = [
     //     6, 6, 6, 
@@ -91,7 +91,7 @@
                     class="piece s-r6LgU90Jc_vZ"
                     style="transform: rotateX(0deg) translateZ(1em) translateX(-1em);"
                 >
-                {#if colors[3] != 0}
+                {#if colors[19] != 0}
                     <div class="element left s-r6LgU90Jc_vZ">
                         <div class="sticker {face[colors[19]]}" />
                     </div>
