@@ -44,7 +44,7 @@
                     <div class="element right U' Y'">
                         <div class="sticker {face[colors[19]]}" />
                     </div>
-                    <div class="element top">
+                    <div class="element top  R2">
                         <div class="sticker {face[colors[5]]}" />
                     </div>
                 </div>
@@ -85,7 +85,7 @@
                     style="transform: rotateX(0deg) translateX(-1em) translateY(-1em);"
                 >
                     <div class="element top">
-                        <div class="sticker {face[colors[3]]}" />
+                        <div class="sticker {face[colors[3]]} R2" />
                     </div>
                 </div>
                 <div
@@ -169,7 +169,7 @@
                     <div class="element right U' F F' Y'">
                         <div class="sticker {face[colors[18]]} F'" />
                     </div>
-                    <div class="element top">
+                    <div class="element top R2">
                         <div class="sticker {face[colors[8]]}" />
                     </div>
                     <div class="element front U R R' Y">
@@ -191,8 +191,8 @@
                     <div class="element right U' Y'">
                         <div class="sticker {face[colors[20]]} U'" />
                     </div>
-                    <div class="element top">
-                        <div class="sticker {face[colors[2]]}" />
+                    <div class="element top R2">
+                        <div class="sticker {face[colors[2]]} R2" />
                     </div>
                 </div>
             </div>
@@ -357,7 +357,7 @@
         }
     }
     .scene {
-        &.U2, &.D2{
+        &.U2, &.D2, &.R2{
             span {
                 display: block !important;
                 color: red;
@@ -367,6 +367,7 @@
                 text-align: left;
             }
         }
+
         &.U div.element.U > .sticker:before,
         &.U2 div.element.U > .sticker:before,
         &.E\' div.element.E\' > .sticker:before,
@@ -396,7 +397,7 @@
         &.Y div.element.U > .sticker.U::after,
         &.Y div.element.E\' > .sticker.E\'::after,
         &.Y div.element.D\' > .sticker.D\':after,
-        &.F\' div.element.F\' > .sticker.F\'::after
+        &.F\' div.element.F\' > .sticker.F\'::after,
         {
             position: absolute;
             top: 50%;
@@ -416,7 +417,8 @@
         &.D2 div.element.D > .sticker:before,
         &.Y\' div.element.U\' > .sticker:before,
         &.Y\' div.element.E > .sticker:before,
-        &.Y\' div.element.D > .sticker:before
+        &.Y\' div.element.D > .sticker:before,
+        &.R2 div.element.R2 > .sticker::before
         {
             background-color: blue;
             position: absolute;
@@ -437,7 +439,7 @@
         &.E div.element.E > .sticker.E::after,
         &.Y\' div.element.U\' > .sticker.U\'::after,
         &.Y\' div.element.E > .sticker.E::after,
-        &.Y\' div.element.D > .sticker.D::after
+        &.Y\' div.element.D > .sticker.D::after,
         {
             position: absolute;
             top: 50%;
@@ -452,6 +454,7 @@
 
         &.R div.element.R > .sticker::before,
         &.R\' div.element.R\' > .sticker::before,
+        &.R2 div.element.R > .sticker::before,
         &.L div.element.L > .sticker::before,
         &.L\' div.element.L\' > .sticker::before
         {
@@ -469,7 +472,8 @@
 
 
         &.R\' div.element.R\' > .sticker.R\'::after,
-        &.L div.element.L > .sticker.L::after
+        &.L div.element.L > .sticker.L::after,
+        &.R2 div.element.R2 > .sticker.R2::after
         {
             position: absolute;
             top: 50%;

@@ -701,12 +701,12 @@
         クロス（完成済み）
       </div>
     </div>
-    <p>向きが大事なのでこの図をしっかり覚えよう！<br/>この矢印が最初に回す方向！</p>
+    <p>向きが大事なのでこの図をしっかり覚えよう！<br/>矢印が最初に回す方向！</p>
     <h2>回し方</h2>
     <h3>1種類の回し方を覚える！</h3>
     <p>上の図の通りの向きで回し始めることがポイント！</p>
     <p>クロスが出来るまで1～3回かかる！毎回向きをしっかり合わせよう！<br/>
-    点→くの字→直線→クロスの順で出来ていく！この順に進まなかったら向きが間違っているよ！
+    点→くの字→直線→クロスの順で出来ていく！この順に進まなかったら向きが間違っている！
     </p>
     <div style="display: grid; grid-template-columns: repeat(5, 1fr);">
     <div>
@@ -754,30 +754,28 @@
         0, 0, 0, 6, 2, 2, 0, 2, 2, 
       ]} notation="U'"/>
     </div>
+    <div class="arrow">
+      <Step colors={[
+        0, 6, 0, 6, 6, 6, 4, 4, 0,
+  
+        3, 3, 0, 3, 3, 0, 3, 3, 0, 
+  
+        0, 0, 0, 6, 2, 2, 0, 2, 2, 
+      ]} notation="F'"/>
     </div>
-    <div style="display: grid; grid-template-columns: repeat(5, 1fr);">
-      <div class="arrow">
-        <Step colors={[
-          0, 6, 0, 6, 6, 6, 4, 4, 0,
-    
-          3, 3, 0, 3, 3, 0, 3, 3, 0, 
-    
-          0, 0, 0, 6, 2, 2, 0, 2, 2, 
-        ]} notation="F'"/>
-      </div>
-      <div class="arrow">
-        <Step colors={[
-          0, 6, 0, 6, 6, 6, 0, 6, 0,
-    
-          0, 0, 0, 3, 3, 3, 3, 3, 3, 
-    
-          0, 0, 0, 2, 2, 2, 2, 2, 2, 
-        ]}/>
-      </div>
+    <div class="arrow">
+      <Step colors={[
+        0, 6, 0, 6, 6, 6, 0, 6, 0,
+  
+        0, 0, 0, 3, 3, 3, 3, 3, 3, 
+  
+        0, 0, 0, 2, 2, 2, 2, 2, 2, 
+      ]}/>
     </div>
   </div>
+  </div>
   <div>
-    <h1>5. 上面の色をそろえる</h1>
+    <h1>5. 上面をそろえる</h1>
     <Step colors={[
       6, 6, 6, 6, 6, 6, 6, 6, 6,
 
@@ -786,6 +784,187 @@
       0, 0, 0, 2, 2, 2, 2, 2, 2, 
 
     ]}/>
+    <h2>上面のクロスをそろえたら、緑のキューブのみに注目すると8パターン！</h2>
+    <div style="display: grid; grid-template-columns: repeat(4, 1fr); row-gap: 1.5em;">
+      <div style="text-align: center">
+        パターン1
+      <Face colors={[
+        0, 6, 6, 6, 6, 6, 0, 6, 0,
+
+        0, 0, 0,
+        0, 0, 6,
+        0, 0, 6,
+        0, 0, 6, 
+      ]} classes={["vertical location2 size3  arrow1"]}/>
+      →パターン8！
+      </div>
+      <div style="text-align: center">
+        パターン2
+        <Face colors={[
+          0, 6, 6, 6, 6, 6, 0, 6, 0,
+  
+          6, 0, 0,
+          0, 0, 0,
+          6, 0, 0,
+          6, 0, 0, 
+        ]} classes={["vertical location2 size3  arrow1"]}/>
+        →パターン1
+      </div>
+      <div style="text-align: center">
+        パターン3
+        <Face colors={[
+          0, 6, 0, 6, 6, 6, 0, 6, 0,
+  
+          0, 0, 6,
+          0, 0, 0,
+          6, 0, 0,
+          6, 0, 6, 
+        ]} classes={["vertical location2 size3  arrow1"]}/>
+        →パターン1
+      </div>
+      <div style="text-align: center">
+        パターン4
+        <Face colors={[
+          0, 6, 0, 6, 6, 6, 0, 6, 0,
+  
+          6, 0, 6,
+          0, 0, 0,
+          6, 0, 6,
+          0, 0, 0, 
+        ]} classes={["vertical location2 size3  arrow1"]}/>
+        →パターン1
+      </div>
+      <div style="text-align: center">
+        パターン5
+      <Face colors={[
+        0, 6, 0, 6, 6, 6, 6, 6, 6,
+
+        0, 0, 0,
+        6, 0, 0,
+        0, 0, 0,
+        0, 0, 6, 
+      ]} classes={["vertical location2 size3  arrow1"]}/>
+      →パターン2
+      </div>
+      <div style="text-align: center">
+        パターン6
+        <Face colors={[
+          6, 6, 0, 6, 6, 6, 6, 6, 0,
+  
+          0, 0, 0,
+          6, 0, 6,
+          0, 0, 0,
+          0, 0, 0, 
+        ]} classes={["vertical location2 size3  arrow1"]}/>
+        →パターン2
+      </div>
+      <div style="text-align: center">
+        パターン7
+        <Face colors={[
+          6, 6, 0, 6, 6, 6, 0, 6, 6,
+  
+          0, 0, 0,
+          6, 0, 0,
+          0, 0, 6,
+          0, 0, 0, 
+        ]} classes={["vertical location2 size3  arrow1"]}/>
+        →パターン2
+      </div>
+      <div style="text-align: center">
+        パターン8
+        <Face colors={[
+          6, 6, 6, 6, 6, 6, 6, 6, 6,
+  
+          0, 0, 0,
+          0, 0, 0,
+          0, 0, 0,
+          0, 0, 0, 
+        ]}/>
+        完成
+      </div>
+    </div>
+    <p>向きが大事なのでこの図をしっかり覚えよう！<br/>矢印が最初に回す方向！</p>
+    <h2>回し方</h2>
+    <h3>1種類の回し方を覚える！</h3>
+    <p>上の図の通りの向きで回し始めることがポイント！</p>
+    <p>上面が完成するまで1～3回かかる！毎回向きをしっかり合わせよう！<br/>
+    回した後にどのパターンになるかも書いているから、この順に進まなかった場合は向きが間違っているよ！
+    </p>
+    <div style="display: grid; grid-template-columns: repeat(5, 1fr);">
+      <div>
+        <Step colors={[
+          0, 6, 6, 6, 6, 6, 0, 6, 0,
+    
+          6, 0, 0, 3, 3, 3, 3, 3, 3, 
+    
+          6, 0, 0, 2, 2, 2, 2, 2, 2, 
+        ]} notation="R"/>
+      </div>
+      <div class="arrow">
+        <Step colors={[
+          0, 6, 0, 6, 6, 3, 0, 6, 3,
+    
+          6, 0, 1, 3, 3, 1, 3, 3, 1, 
+    
+          2, 2, 6, 2, 2, 0, 2, 2, 0, 
+        ]} notation="U2"/>
+      </div>
+      <div class="arrow">
+        <Step colors={[
+          3, 6, 0, 3, 6, 6, 0, 6, 0,
+    
+          0, 0, 0, 3, 3, 1, 3, 3, 1, 
+    
+          6, 0, 0, 2, 2, 0, 2, 2, 0, 
+        ]} notation="R'"/>
+      </div>
+      <div class="arrow">
+        <Step colors={[
+          3, 6, 6, 3, 6, 6, 0, 6, 6,
+    
+          0, 0, 0, 3, 3, 6, 3, 3, 0, 
+    
+          0, 0, 0, 0, 2, 2, 6, 2, 2, 
+        ]} notation="U'"/>
+      </div>
+      <div class="arrow">
+        <Step colors={[
+          6, 6, 6, 6, 6, 6, 3, 3, 0,
+    
+          2, 2, 6, 3, 3, 6, 3, 3, 0, 
+    
+          0, 0, 0, 0, 2, 2, 6, 2, 2, 
+        ]} notation="R"/>
+      </div>
+      <div class="arrow">
+        <Step colors={[
+          6, 6, 6, 6, 6, 6, 3, 3, 0,
+    
+          2, 2, 0, 3, 3, 1, 3, 3, 1, 
+    
+          6, 0, 0, 2, 2, 0, 2, 2, 0, 
+        ]} notation="U'"/>
+      </div>
+      <div class="arrow">
+        <Step colors={[
+          6, 6, 0, 6, 6, 3, 6, 6, 3,
+    
+          0, 0, 1, 3, 3, 1, 3, 3, 1, 
+    
+          2, 2, 0, 2, 2, 0, 2, 2, 0, 
+        ]} notation="R'"/>
+      </div>
+      <div class="arrow">
+        <Step colors={[
+          6, 6, 6, 6, 6, 6, 6, 6, 6,
+    
+          0, 0, 0, 3, 3, 3, 3, 3, 3, 
+    
+          0, 0, 0, 2, 2, 2, 2, 2, 2, 
+        ]}/>
+      </div>
+    </div>
+    </div>
   </div>
   <div>
     <h1>6. エッジキューブの向きをそろえる</h1>
@@ -796,6 +975,173 @@
 
       0, 2, 0, 2, 2, 2, 2, 2, 2, 
     ]}/>
+    <h2>パターンの把握が難しい！</h2>
+    <p>上段をくるくる回してみよう。</p>
+    <Step colors={[
+      6, 6, 6, 6, 6, 6, 6, 6, 6,
+
+      0, 0, 0, 3, 3, 3, 3, 3, 3, 
+
+      0, 0, 0, 2, 2, 2, 2, 2, 2, 
+    ]} notation="U"/>
+    
+    <p>くるくる回していると、センターキューブとエッジキューブがそろうときがいくつかある！</p>
+    <p>そのうちのどれかが次の3パターンに絶対に当てはまっている！</p>
+    <div style="display: grid; grid-template-columns: repeat(3, 1fr);">
+      <div style="text-align: center">
+      パターン1
+      <Face colors={[
+        6, 6, 6, 6, 6, 6, 6, 6, 6,
+
+        0, 7, 0,
+        0, 0, 0,
+        0, 0, 0,
+        0, 0, 0, 
+      ]} classes={["vertical location2 size3  arrow1"]}/>
+      →パターン1, 3<br/>
+      1つだけそろう場合
+      </div>
+      <div style="text-align: center">
+        パターン2
+        <Face colors={[
+          6, 6, 6, 6, 6, 6, 6, 6, 6,
+  
+          0, 7, 0,
+          0, 0, 0,
+          0, 7, 0,
+          0, 0, 0, 
+        ]} classes={["vertical location2 size3  arrow1"]}/>
+        →パターン1<br/>
+        かならず2つ以上そろう場合
+      </div>
+      <div style="text-align: center">
+        パターン3
+        <Face colors={[
+          6, 6, 6, 6, 6, 6, 6, 6, 6,
+  
+          0, 7, 0,
+          0, 7, 0,
+          0, 7, 0,
+          0, 7, 0, 
+        ]}/>
+        完成<br/>
+        全部そろっている場合
+      </div>
+    </div>
+    <h2>回し方</h2>
+    <h3>1種類の回し方を覚える！</h3>
+    <p>センターキューブとエッジキューブがそろっている面を奥側にすることがポイント！</p>
+    <p>完成するまで1～3回かかる！毎回向きをしっかり合わせよう！</p>
+    <div style="display: grid; grid-template-columns: repeat(5, 1fr);">
+      <div>
+        <Step colors={[
+          6, 6, 6, 6, 6, 6, 6, 6, 6,
+    
+          0, 4, 0, 3, 3, 3, 3, 3, 3, 
+    
+          0, 3, 0, 2, 2, 2, 2, 2, 2, 
+        ]} notation="R2"/>
+      </div>
+      <div class="arrow">
+        <Step colors={[
+          6, 6, 1, 6, 6, 1, 6, 6, 1,
+    
+          0, 4, 5, 3, 3, 5, 3, 3, 0, 
+    
+          2, 2, 2, 2, 2, 2, 0, 3, 0, 
+        ]} notation="U"/>
+      </div>
+      <div class="arrow">
+        <Step colors={[
+          6, 6, 6, 6, 6, 6, 1, 1, 1,
+    
+          2, 2, 2, 3, 3, 5, 3, 3, 0, 
+    
+          3, 5, 0, 2, 2, 2, 0, 3, 0, 
+        ]} notation="R"/>
+      </div>
+      <div class="arrow">
+        <Step colors={[
+          6, 6, 2, 6, 6, 5, 1, 1, 0,
+    
+          2, 2, 6, 3, 3, 6, 3, 3, 6, 
+    
+          0, 2, 3, 3, 2, 5, 0, 2, 5, 
+        ]} notation="U"/>
+      </div>
+      <div class="arrow">
+        <Step colors={[
+          1, 6, 6, 1, 6, 6, 0, 5, 2,
+    
+          0, 2, 3, 3, 3, 6, 3, 3, 6, 
+    
+          1, 2, 0, 3, 2, 5, 0, 2, 5, 
+        ]} notation="R'"/>
+      </div>
+      <div class="arrow">
+        <Step colors={[
+          1, 6, 6, 1, 6, 6, 0, 5, 0,
+    
+          2, 2, 6, 3, 3, 6, 3, 3, 2, 
+    
+          0, 5, 0, 2, 2, 2, 1, 3, 0, 
+        ]} notation="U'"/>
+      </div>
+      <div class="arrow">
+        <Step colors={[
+          6, 6, 0, 6, 6, 5, 1, 1, 0,
+    
+          2, 2, 6, 3, 3, 6, 3, 3, 2, 
+    
+          0, 2, 6, 2, 2, 2, 1, 3, 0, 
+        ]} notation="R'"/>
+      </div>
+      <div class="arrow">
+        <Step colors={[
+          6, 6, 0, 6, 6, 3, 1, 1, 0,
+    
+          2, 2, 0, 3, 3, 5, 3, 3, 0, 
+    
+          6, 2, 0, 2, 2, 3, 0, 2, 1, 
+        ]} notation="U'"/>
+      </div>
+      <div class="arrow">
+        <Step colors={[
+          3, 3, 0, 6, 6, 1, 6, 6, 1,
+    
+          0, 4, 5, 3, 3, 5, 3, 3, 0, 
+    
+          2, 2, 0, 2, 2, 3, 0, 2, 1, 
+        ]} notation="R'"/>
+      </div>
+      <div class="arrow">
+        <Step colors={[
+          3, 3, 3, 6, 6, 6, 6, 6, 6,
+    
+          0, 4, 0, 3, 3, 1, 3, 3, 1, 
+    
+          0, 3, 1, 2, 2, 2, 2, 2, 0, 
+        ]} notation="U"/>
+      </div>
+      <div class="arrow">
+        <Step colors={[
+          6, 6, 3, 6, 6, 3, 6, 6, 3,
+    
+          0, 3, 1, 3, 3, 1, 3, 3, 1, 
+    
+          2, 2, 0, 2, 2, 2, 2, 2, 0, 
+        ]} notation="R'"/>
+      </div>
+      <div class="arrow">
+        <Step colors={[
+          6, 6, 6, 6, 6, 6, 6, 6, 6,
+    
+          0, 3, 0, 3, 3, 3, 3, 3, 3, 
+    
+          0, 2, 0, 2, 2, 2, 2, 2, 2, 
+        ]}/>
+      </div> 
+    </div>
   </div>
   <div>
     <h1>7. コーナーキューブの向きをそろえる</h1>
@@ -806,6 +1152,158 @@
 
       2, 2, 2, 2, 2, 2, 2, 2, 2, 
     ]}/>
+        <h2>そろっているコーナーキューブを探そう！</h2>
+        <p>エッジキューブがそろったら、次の3パターンに絶対に当てはまっている！</p>
+        <div style="display: grid; grid-template-columns: repeat(3, 1fr);">
+          <div style="text-align: center">
+          パターン1
+          <Face colors={[
+            6, 6, 6, 6, 6, 6, 6, 6, 6,
+    
+            7, 0, 0,
+            0, 0, 0,
+            0, 0, 0,
+            0, 0, 7, 
+          ]} classes={["vertical location2 size3  arrow1"]}/>
+          →パターン1, 3<br/>
+          1つだけそろう場合
+          </div>
+          <div style="text-align: center">
+            パターン2
+            <Face colors={[
+              6, 6, 6, 6, 6, 6, 6, 6, 6,
+      
+              0, 0, 0,
+              0, 0, 0,
+              0, 0, 0,
+              0, 0, 0, 
+            ]} classes={["vertical location2 size3  arrow1"]}/>
+            →パターン1<br/>
+            1つもそろっていない場合<br/>
+            （どれを左上にしてもいい！）
+          </div>
+          <div style="text-align: center">
+            パターン3
+            <Face colors={[
+              6, 6, 6, 6, 6, 6, 6, 6, 6,
+      
+              7, 0, 7,
+              7, 0, 7,
+              7, 0, 7,
+              7, 0, 7, 
+            ]}/>
+            完成<br/>
+            全部そろっている場合
+          </div>
+        </div>
+    <h2>回し方</h2>
+    <h3>1種類の回し方を覚える！</h3>
+    <p>
+      最後は緑面を正面にしてもつ！
+    </p>
+    <p>
+      そろっているコーナーキューブを常に左上にすることがポイント！<br/>
+    </p>
+    <p>完成するまで1～3回かかる！毎回向きをしっかり合わせよう！</p>
+    <div style="display: grid; grid-template-columns: repeat(5, 1fr);">
+      <div>
+        <Step colors={[
+          5, 5, 5, 5, 5, 5, 5, 5, 2,
+    
+          6, 6, 6, 6, 6, 6, 6, 6, 6, 
+    
+          3, 2, 2, 2, 2, 2, 3, 2, 2, 
+        ]} notation="R2"/>
+      </div>
+      <div class="arrow">
+        <Step colors={[
+          5, 5, 4, 5, 5, 3, 5, 5, 3,
+    
+          6, 6, 1, 6, 6, 1, 6, 6, 1, 
+    
+          2, 2, 3, 2, 2, 2, 2, 2, 3, 
+        ]} notation="D2"/>
+      </div>
+      <div class="arrow">
+        <Step colors={[
+          5, 5, 4, 5, 5, 3, 5, 5, 3,
+    
+          6, 6, 1, 6, 6, 1, 6, 1, 1, 
+    
+          2, 2, 3, 2, 2, 2, 4, 4, 2, 
+        ]} notation="R'"/>
+      </div>
+      <div class="arrow">
+        <Step colors={[
+          5, 5, 6, 5, 5, 6, 5, 5, 6,
+    
+          6, 6, 4, 6, 6, 3, 6, 1, 3, 
+
+          3, 2, 2, 2, 2, 4, 2, 2, 4, 
+        ]} notation="U'"/>
+      </div>
+      <div class="arrow">
+        <Step colors={[
+          6, 6, 6, 5, 5, 5, 5, 5, 5,
+    
+          4, 4, 4, 6, 6, 3, 6, 1, 3, 
+
+          6, 6, 4, 2, 2, 4, 2, 2, 4, 
+        ]} notation="R"/>
+      </div>
+      <div class="arrow">
+        <Step colors={[
+          6, 6, 4, 5, 5, 3, 5, 5, 3,
+    
+          4, 4, 1, 6, 6, 1, 6, 1, 1, 
+
+          2, 2, 6, 2, 2, 6, 4, 4, 4, 
+        ]} notation="D2"/>
+      </div>
+      <div class="arrow">
+        <Step colors={[
+          6, 6, 4, 5, 5, 3, 5, 5, 3,
+    
+          4, 4, 1, 6, 6, 1, 6, 6, 1, 
+    
+          2, 2, 6, 2, 2, 6, 2, 2, 3, 
+        ]} notation="R'"/>
+      </div>
+      <div class="arrow">
+        <Step colors={[
+          6, 6, 6, 5, 5, 5, 5, 5, 5,
+    
+          4, 4, 4, 6, 6, 3, 6, 6, 3, 
+    
+          6, 6, 3, 2, 2, 2, 2, 2, 2, 
+        ]} notation="U"/>
+      </div>
+      <div class="arrow">
+        <Step colors={[
+          5, 5, 6, 5, 5, 6, 5, 5, 6,
+    
+          6, 6, 3, 6, 6, 3, 6, 6, 3, 
+    
+          2, 2, 2, 2, 2, 2, 2, 2, 2, 
+        ]} notation="R'"/>
+      </div>
+      <div class="arrow">
+        <Step colors={[
+          5, 5, 5, 5, 5, 5, 5, 5, 5, 
+
+          6, 6, 6, 6, 6, 6, 6, 6, 6,
+
+          2, 2, 2, 2, 2, 2, 2, 2, 2, 
+        ]}/>
+      </div>        
+    </div>
+  </div>
+  <div>
+    <h1>8. 完成できたら</h1>
+    <p>何回も繰り返しそろえて、何も見なくてもできるようになろう！</p>
+    <p>このサイトで覚えた回し方は10通りくらいだけど、本格的にやるなら最低200通りくらい覚えることになる！</p>
+    <p>回し方が上手になればこのやり方だけでも1分は切れるようになるはず！</p>
+    <p>目指せ1分切り！！</p>
   </div>
 </main>
 
