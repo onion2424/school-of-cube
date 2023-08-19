@@ -2,7 +2,7 @@
 @media (max-width: 389px) {
   :root
   {
-      --cube-scale: 1.0;
+      --cube-scale: 0.8;
   }
 }
 @media (min-width: 390px) and (max-width: 519px) {
