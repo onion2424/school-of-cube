@@ -322,7 +322,7 @@
                 height: 100%;
                 background: $base-color;
                 outline: 1px solid transparent; // firefox aliasing
-                border: 0.05em solid $base-color {
+                border: 0.1em solid $base-color {
                     radius: $rounded;
                 }
                 @each $face, $angles in $faces {
