@@ -5,8 +5,8 @@
 </script>
 
 <main>
-  <div>
-    <h1 role="button" tabindex=0 on:click={(e) => {show = show === 0 ? -1 : 0;}} on:keyup={(e) => {return;}}>0. キューブの基本</h1>
+  <div id="param0">
+    <h1 role="button" tabindex=0 on:click={(e) => {show = show === 0 ? -1 : 0;}} on:keyup={(e) => {return;}}><a href="#param0">0. キューブの基本</a></h1>
     {#if show === 0}
     <h2>キューブの形</h2>
     <p>3種類の形のキューブで構成されている。</p>
@@ -63,7 +63,7 @@
     </p>  
     <h2>キューブの回し方</h2>
     <h3>上面の回し方(U, U')</h3>
-    <div style="display: grid; grid-template-columns: repeat(2, 1fr;">
+    <div style="display: grid; grid-template-columns: repeat(2, 1fr);">
       <iframe width="100%" height="315" src="https://www.youtube.com/embed/rcpjD1QvIOk" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
       <iframe width="100%" height="315" src="https://www.youtube.com/embed/HZzvgxkzGeA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
       <Step colors={[
@@ -123,8 +123,8 @@
     <p>最初はこのくらいを意識しよう！</p>
     {/if}
   </div>
-  <div>
-    <h1 on:click={(e) => {show = show === 1 ? -1 : 1;}}>1. クロスをそろえる</h1>
+  <div id="param1">
+    <h1><a href="#param1" on:click={(e) => {show = show === 1 ? -1 : 1;}}>1. クロスをそろえる</a></h1>
     {#if show === 1}
     <Step colors={[
       0, 1, 0, 1, 1, 1, 0, 1, 0,
@@ -267,8 +267,8 @@
 </div>
 {/if}
 </div>
-  <div>
-    <h1 on:click={(e) => {show = show === 2 ? -1 : 2;}}>2. コーナーキューブを入れて一面をそろえる</h1>
+  <div id="param2">
+    <h1 on:click={(e) => {show = show === 2 ? -1 : 2;}}><a href="#param2">2. コーナーキューブを入れて一面をそろえる</a></h1>
     {#if show === 2}
     <Step colors={[
       1, 1, 1, 1, 1, 1, 1, 1, 1,
@@ -277,9 +277,55 @@
 
       3, 3, 3, 0, 3, 0, 0, 0, 0,
     ]}/>
+    <h2>ポイント！</h2>
+    <p>入れようとしているキューブを、入れたい位置の真下に持ってこよう！</p>
+    <p>例えば...</p>
+    <div style="display: grid; grid-template-columns: repeat(4, 1fr);">
+      <div style="text-align: center">
+        ピンクに入れたいから
+        <Step colors={[
+          1, 1, 1, 1, 1, 1, 1, 1, 7,
+
+          2, 2, 7, 0, 2, 0, 1, 0, 0,
+
+          7, 3, 3, 0, 3, 0, 0, 0, 0,
+        ]} notation="D"/>
+      </div>
+      <div class="arrow" style="text-align: center">
+        真下に持ってくる！
+        <Step colors={[
+          1, 1, 1, 1, 1, 1, 1, 1, 7,
+
+          2, 2, 7, 0, 2, 0, 0, 0, 2,
+
+          7, 3, 3, 0, 3, 0, 1, 0, 0,
+        ]}/>
+      </div>
+      <div style="text-align: center">
+        ピンクに入れたいから
+        <Step colors={[
+          1, 1, 1, 1, 1, 1, 1, 1, 7,
+
+          2, 2, 7, 0, 2, 0, 0, 0, 0,
+
+          7, 3, 3, 0, 3, 0, 0, 0, 3,
+        ]} notation="D'"/>
+      </div>
+      <div class="arrow" style="text-align: center">
+        真下に持ってくる！
+        <Step colors={[
+          1, 1, 1, 1, 1, 1, 1, 1, 7,
+
+          2, 2, 7, 0, 2, 0, 0, 0, 3,
+
+          7, 3, 3, 0, 3, 0, 1, 0, 0,
+        ]}/>
+      </div>
+    </div>
+    <p>真下に持ってこられたら、入れるための回し方を覚えよう！</p>
+
     <h2>回し方</h2>
     <h3>2種類の入れ方を覚える！</h3>
-    <p>入れようとしているキューブを、入れたい位置の真下に持ってくることがポイント！</p>
     <p>真下に持ってきたコーナーキューブの青面を自分にむけると、この2つのどちらかになる！</p>
     <div style="display: grid; grid-template-columns: repeat(5, 1fr);">
       <div>
@@ -440,8 +486,8 @@
     </div>
     {/if}
   </div>
-  <div>
-    <h1 on:click={(e) => {show = show === 3 ? -1 : 3;}}>3. 2列目をそろえる</h1>
+  <div id="param3">
+    <h1 on:click={(e) => {show = show === 3 ? -1 : 3;}}><a href="#param3">3. 2列目をそろえる</a></h1>
     {#if show === 3}
     <Step colors={[
       0, 0, 0, 0, 6, 0, 0, 0, 0,
@@ -452,7 +498,103 @@
 
     ]}/>
     <h2>一面をそろえられたら、すぐ下に向ける！</h2>
-    <p>これ以降はずっと緑が上面で進めていくよ！</p>
+    <p>これ以降は緑が上面で進めていくよ！</p>
+    <h1>ポイント</h1>
+    <p>
+      入れようとしているキューブを、入れたい場所の斜め上に持ってこよう！<br/>
+      縦一直線同じ色になるのもポイント！
+    </p>
+    <div style="display: grid; grid-template-columns: repeat(4, 1fr);">
+      <div style="text-align:center;">
+        ピンクに入れたいから
+        <Step colors={[
+          0, 0, 0, 2, 6, 0, 0, 0, 0,
+    
+          0, 0, 0, 3, 3, 7, 3, 3, 3, 
+    
+          0, 0, 0, 7, 2, 2, 2, 2, 2, 
+        ]} notation="U'"/>
+      </div>
+      <div class="arrow "style="text-align:center;">
+        斜め上に持ってくる！
+        <Step colors={[
+          0, 0, 0, 0, 6, 0, 0, 2, 0,
+    
+          0, 3, 0, 3, 3, 0, 3, 3, 3, 
+    
+          0, 0, 0, 0, 2, 2, 2, 2, 2, 
+        ]}/>
+        縦一直線！
+      </div>
+      <div style="text-align:center;">
+        ピンクに入れたいから
+        <Step colors={[
+          0, 0, 0, 0, 6, 0, 0, 3, 0,
+    
+          0, 2, 0, 3, 3, 7, 3, 3, 3, 
+    
+          0, 0, 0, 7, 2, 2, 2, 2, 2, 
+        ]} notation="U'"/>
+        縦一直線？
+      </div>
+      <div class="arrow "style="text-align:center;">
+        斜め上に持ってくる！
+        <Step colors={[
+          0, 0, 0, 0, 6, 0, 0, 2, 0,
+    
+          0, 3, 0, 3, 3, 0, 3, 3, 3, 
+    
+          0, 0, 0, 0, 2, 2, 2, 2, 2, 
+        ]}/>
+        縦一直線！
+      </div>
+    </div>
+    <p>2列目に入っちゃっている時がある！</p>
+    <p>そういうときは、適当なキューブを入れて外に出してあげよう！</p>
+    <div style="display: grid; grid-template-columns: repeat(4, 1fr);">
+      <div style="text-align:center;">
+        逆なら
+        <Step colors={[
+          0, 0, 0, 0, 6, 0, 0, 7, 0,
+    
+          0, 7, 0, 3, 3, 2, 3, 3, 3, 
+    
+          0, 0, 0, 3, 2, 2, 2, 2, 2, 
+        ]}/>
+        右側パターン
+      </div>
+      <div class="arrow "style="text-align:center;">
+        外に出そう！
+        <Step colors={[
+          0, 2, 0, 0, 6, 0, 0, 0, 0,
+    
+          0, 0, 0, 3, 3, 7, 3, 3, 3, 
+    
+          0, 0, 0, 7, 2, 2, 2, 2, 2, 
+        ]}/>
+      </div>
+      <div style="text-align:center;">
+        違うなら
+        <Step colors={[
+          0, 0, 0, 0, 6, 7, 0, 0, 0,
+    
+          0, 0, 0, 3, 3, 3, 3, 3, 3, 
+    
+          0, 7, 0, 5, 2, 2, 2, 2, 2, 
+        ]}/>
+        左側パターン
+      </div>
+      <div class="arrow "style="text-align:center;">
+        外に出そう！
+        <Step colors={[
+          0, 0, 0, 5, 6, 0, 0, 0, 0,
+    
+          0, 0, 0, 3, 3, 7, 3, 3, 3, 
+    
+          0, 0, 0, 7, 2, 2, 2, 2, 2, 
+        ]}/>
+      </div>
+    </div> 
     <h2>回し方</h2>
     <h3>2種類の入れ方を覚える！</h3>
     <p>入れようとしているキューブを、センターキューブの真上に持ってくることがポイント！</p>
@@ -650,8 +792,8 @@
     {/if}
   </div>
   
-  <div>
-    <h1 on:click={(e) => {show = show === 4 ? -1 : 4;}}>4. 上面のクロスをそろえる</h1>
+  <div id="param4">
+    <h1 on:click={(e) => {show = show === 4 ? -1 : 4;}}><a href="#param4">4. 上面のクロスをそろえる</a></h1>
     {#if show === 4}
     <Step colors={[
       0, 6, 0, 6, 6, 6, 0, 6, 0,
@@ -782,8 +924,8 @@
   </div>
   {/if}
   </div>
-  <div>
-    <h1 on:click={(e) => {show = show === 5 ? -1 : 5;}}>5. 上面をそろえる</h1>
+  <div id="param5">
+    <h1 on:click={(e) => {show = show === 5 ? -1 : 5;}}><a href="#param5">5. 上面をそろえる</a></h1>
     {#if show === 5}
     <Step colors={[
       6, 6, 6, 6, 6, 6, 6, 6, 6,
@@ -975,8 +1117,8 @@
     </div>
     {/if}
     </div>
-  <div>
-    <h1 on:click={(e) => {show = show === 6 ? -1 : 6;}}>6. エッジキューブの向きをそろえる</h1>
+  <div id="param6">
+    <h1 on:click={(e) => {show = show === 6 ? -1 : 6;}}><a href="#param6">6. エッジキューブの向きをそろえる</a></h1>
     {#if show === 6}
     <Step colors={[
       6, 6, 6, 6, 6, 6, 6, 6, 6,
@@ -996,7 +1138,61 @@
     ]} notation="U"/>
     
     <p>くるくる回していると、センターキューブとエッジキューブがそろうときがいくつかある！</p>
-    <p>そのうちのどれかが次の3パターンに絶対に当てはまっている！</p>
+    <Step colors={[
+      6, 6, 6, 6, 6, 6, 6, 6, 6,
+
+      0, 7, 0, 0, 7, 0, 0, 0, 0, 
+
+      0, 0, 0, 0, 0, 0, 0, 0, 0, 
+    ]}/>
+    <p>センターキューブとエッジキューブがそろうというのは、上のキューブで言うピンクの位置の色が同じという意味だよ！
+    </p>
+    <p>上面を回してみて、</p>
+    <div style="display: grid; grid-template-columns: repeat(4, 1fr);">
+      <div style="text-align:center;">
+        白
+        <Step colors={[
+          6, 6, 6, 6, 6, 6, 6, 6, 6,
+    
+          0, 3, 0, 3, 3, 3, 3, 3, 3, 
+    
+          0, 0, 0, 2, 2, 2, 2, 2, 2, 
+        ]}/>
+      </div>
+      <div style="text-align:center;">
+        オレンジ
+        <Step colors={[
+          6, 6, 6, 6, 6, 6, 6, 6, 6,
+    
+          0, 2, 0, 2, 2, 2, 2, 2, 2, 
+
+          0, 0, 0, 5, 5, 5, 5, 5, 5, 
+        ]}/>
+      </div>
+      <div style="text-align:center;">
+        黄
+        <Step colors={[
+          6, 6, 6, 6, 6, 6, 6, 6, 6,
+    
+          0, 5, 0, 5, 5, 5, 5, 5, 5, 
+    
+          0, 0, 0, 4, 4, 4, 4, 4, 4, 
+        ]}/>
+      </div>
+      <div style="text-align:center;">
+        赤
+        <Step colors={[
+          6, 6, 6, 6, 6, 6, 6, 6, 6,
+
+          0, 4, 0, 4, 4, 4, 4, 4, 4, 
+    
+          0, 0, 0, 3, 3, 3, 3, 3, 3, 
+        ]}/>
+      </div>
+    </div>
+    <p>こんな感じで全部の色を一回ずつそろえてみよう！</p>
+    <p>そろえたうちのどれかが次の3パターンに絶対に当てはまっている！</p>
+    <p>どれかを見つけたら、そろっている面を奥にして次のパターンにあてはまらないか探してね！</p>
     <div style="display: grid; grid-template-columns: repeat(3, 1fr);">
       <div style="text-align: center">
       パターン1
@@ -1154,8 +1350,8 @@
     </div>
     {/if}
   </div>
-  <div>
-    <h1 on:click={(e) => {show = show === 7 ? -1 : 7;}}>7. コーナーキューブの向きをそろえる</h1>
+  <div id="param7">
+    <h1 on:click={(e) => {show = show === 7 ? -1 : 7;}}><a href="#param7">7. コーナーキューブの向きをそろえる</a></h1>
     {#if show === 7}
     <Step colors={[
       6, 6, 6, 6, 6, 6, 6, 6, 6,
@@ -1164,57 +1360,101 @@
 
       2, 2, 2, 2, 2, 2, 2, 2, 2, 
     ]}/>
-        <h2>そろっているコーナーキューブを探そう！</h2>
-        <p>エッジキューブがそろったら、次の3パターンに絶対に当てはまっている！</p>
-        <div style="display: grid; grid-template-columns: repeat(3, 1fr);">
-          <div style="text-align: center">
-          パターン1
-          <Face colors={[
-            6, 6, 6, 6, 6, 6, 6, 6, 6,
+    <h2>そろっているコーナーキューブを探そう！</h2>
+    <p>一つ前の手順を終えてエッジキューブがそろったら、次はそろっているコーナーキューブを探そう！</p>
+    <div style="display: grid; grid-template-columns: repeat(4, 1fr);">
+      <div style="text-align:center;">
+        <Step colors={[
+          6, 6, 6, 6, 6, 6, 6, 6, 6,
     
-            7, 0, 0,
-            0, 0, 0,
-            0, 0, 0,
-            0, 0, 7, 
-          ]} classes={["vertical location2 size3  arrow1"]}/>
-          →パターン1, 3<br/>
-          1つだけそろう場合
-          </div>
-          <div style="text-align: center">
-            パターン2
-            <Face colors={[
-              6, 6, 6, 6, 6, 6, 6, 6, 6,
-      
-              0, 0, 0,
-              0, 0, 0,
-              0, 0, 0,
-              0, 0, 0, 
-            ]} classes={["vertical location2 size3  arrow1"]}/>
-            →パターン1<br/>
-            1つもそろっていない場合<br/>
-            （どれを左上にしてもいい！）
-          </div>
-          <div style="text-align: center">
-            パターン3
-            <Face colors={[
-              6, 6, 6, 6, 6, 6, 6, 6, 6,
-      
-              7, 0, 7,
-              7, 0, 7,
-              7, 0, 7,
-              7, 0, 7, 
-            ]}/>
-            完成<br/>
-            全部そろっている場合
-          </div>
-        </div>
+          0, 3, 3, 3, 3, 3, 3, 3, 3,
+
+          2, 2, 0, 2, 2, 2, 2, 2, 2, 
+        ]}/>
+        これ？
+      </div>
+      <div style="text-align:center;">
+        <Step colors={[
+          6, 6, 6, 6, 6, 6, 6, 6, 6,
+    
+          0, 4, 4, 4, 4, 4, 4, 4, 4, 
+    
+          3, 3, 0, 3, 3, 3, 3, 3, 3, 
+        ]}/>
+        それ？
+      </div>
+      <div style="text-align:center;">
+        <Step colors={[
+          6, 6, 6, 6, 6, 6, 6, 6, 6,
+    
+          0, 5, 5, 5, 5, 5, 5, 5, 5, 
+    
+          4, 4, 0, 4, 4, 4, 4, 4, 4, 
+        ]}/>
+        あれ？
+      </div>
+      <div style="text-align:center;">
+        <Step colors={[
+          6, 6, 6, 6, 6, 6, 6, 6, 6,
+    
+          0, 2, 2, 2, 2, 2, 2, 2, 2, 
+
+          5, 5, 0, 5, 5, 5, 5, 5, 5, 
+        ]}/>
+        どれ？
+      </div>
+    </div>
+    <p>
+      1つだけそろっているならパターン1！<br/>
+      どこもそろっていなければパターン2！<br/>
+      全部がそろっていれば運が良い！！<br/>
+    </p>
+    <div style="display: grid; grid-template-columns: repeat(3, 1fr);">
+      <div style="text-align: center">
+      パターン1
+      <Face colors={[
+        6, 6, 6, 6, 6, 6, 6, 6, 6,
+
+        7, 0, 0,
+        0, 0, 0,
+        0, 0, 0,
+        0, 0, 7, 
+      ]} classes={["vertical location2 size3  arrow1"]}/>
+      →パターン1, 3<br/>
+      </div>
+      <div style="text-align: center">
+        パターン2
+        <Face colors={[
+          6, 6, 6, 6, 6, 6, 6, 6, 6,
+  
+          0, 0, 0,
+          0, 0, 0,
+          0, 0, 0,
+          0, 0, 0, 
+        ]} classes={["vertical location2 size3  arrow1"]}/>
+        →パターン1<br/>
+      </div>
+      <div style="text-align: center">
+        パターン3
+        <Face colors={[
+          6, 6, 6, 6, 6, 6, 6, 6, 6,
+  
+          7, 0, 7,
+          7, 0, 7,
+          7, 0, 7,
+          7, 0, 7, 
+        ]}/>
+        完成<br/>
+      </div>
+    </div>
     <h2>回し方</h2>
     <h3>1種類の回し方を覚える！</h3>
     <p>
       最後は緑面を正面にしてもつ！
     </p>
     <p>
-      そろっているコーナーキューブを常に左上にすることがポイント！<br/>
+      そろっているコーナーキューブを左上になるように持つことがポイント！<br/>
+      そろっているキューブが無い場合はどこを左上にしても良いよ！
     </p>
     <p>完成するまで1～3回かかる！毎回向きをしっかり合わせよう！</p>
     <div style="display: grid; grid-template-columns: repeat(5, 1fr);">
@@ -1311,8 +1551,8 @@
     </div>
     {/if}
   </div>
-  <div>
-    <h1 on:click={(e) => {show = show === 8 ? -1 : 8;}}>8. 完成できたら</h1>
+  <div id="param8">
+    <h1 on:click={(e) => {show = show === 8 ? -1 : 8;}}><a href="#param8">8. 完成できたら</a></h1>
     {#if show === 8}
     <p>何回も繰り返しそろえて、何も見なくてもできるようになろう！</p>
     <p>このサイトで覚えた回し方は10通りくらいだけど、本格的にやるなら最低200通りくらい覚えることになる！</p>
@@ -1333,6 +1573,11 @@
     &:hover
     {
       text-decoration:underline;
+    }
+    > a
+    {
+      color:inherit;
+      text-decoration: none;
     }
   }
   
