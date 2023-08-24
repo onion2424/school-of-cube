@@ -564,7 +564,7 @@
         右側パターン
       </div>
       <div class="arrow "style="text-align:center;">
-        外に出そう！
+        外に！
         <Step colors={[
           0, 2, 0, 0, 6, 0, 0, 0, 0,
     
@@ -585,7 +585,7 @@
         左側パターン
       </div>
       <div class="arrow "style="text-align:center;">
-        外に出そう！
+        外に！
         <Step colors={[
           0, 0, 0, 5, 6, 0, 0, 0, 0,
     
@@ -1204,8 +1204,8 @@
         0, 0, 0,
         0, 0, 0, 
       ]} classes={["vertical location2 size3  arrow1"]}/>
-      →パターン1, 3<br/>
-      1つだけそろう場合
+      1つだけそろう場合<br/>
+      →パターン1, 3
       </div>
       <div style="text-align: center">
         パターン2
@@ -1217,8 +1217,8 @@
           0, 7, 0,
           0, 0, 0, 
         ]} classes={["vertical location2 size3  arrow1"]}/>
-        →パターン1<br/>
-        かならず2つ以上そろう場合
+        かならず2つ以上そろう場合<br/>
+        →パターン1
       </div>
       <div style="text-align: center">
         パターン3
@@ -1230,8 +1230,8 @@
           0, 7, 0,
           0, 7, 0, 
         ]}/>
-        完成<br/>
-        全部そろっている場合
+        全部そろっている場合<br/>
+        完成
       </div>
     </div>
     <h2>回し方</h2>
